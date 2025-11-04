@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* CSS Reset */
 
 * {
@@ -9,10 +12,21 @@ body {
     line-height: 1.5;
 }
 
+/************** COLOURS **************/
+.bg-primary { background-color: #7b4b2d; }
+.bg-light { background-color: #ffffff; }
+.bg-dark { background-color: #363029; }
+.bg-muted { background-color: #efe1cb; }
+
 /************** SWATCHES **************/
+.swatches {
+    display: flex; /* organizes children elements in a line */
+    gap: 1rem;
+}
+
 .swatch .swatch-value {
-    background-color: #7b4b2d;
     aspect-ratio: 1 / 1;
     width: 4rem; /* em - root font size (16px) */
     border-radius: 100%;
+    box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(54, 48, 41, 0.2);
 }
