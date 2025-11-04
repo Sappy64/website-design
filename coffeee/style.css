@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Variables for this website */
+:root {
+    --primary: #7b4b2d;
+    --light: #ffffff;
+    --dark: #363029;
+    --muted: #efe1cb;
+}
 
 /* CSS Reset */
 
@@ -9,14 +16,25 @@
 }
 
 body {
+    font-family: Helvetica, Arial, sans-serif;
     line-height: 1.5;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Serif", Arial, sans-serif;
+    margin-bottom: 0.5rem;
+}
+
 /************** COLOURS **************/
-.bg-primary { background-color: #7b4b2d; }
-.bg-light { background-color: #ffffff; }
-.bg-dark { background-color: #363029; }
-.bg-muted { background-color: #efe1cb; }
+.bg-primary { background-color: var(--primary); }
+.bg-light { background-color: var(--light); }
+.bg-dark { background-color: var(--dark); }
+.bg-muted { background-color: var(--muted); }
+
+.text-primary { color: var(--primary); }
+.text-light { color: var(--light); }
+.text-dark { color: var(--dark); }
+.text-muted { color: var(--muted); }
 
 /************** SWATCHES **************/
 .swatches {
