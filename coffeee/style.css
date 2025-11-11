@@ -48,6 +48,17 @@ h1, h2, h3, h4, h5, h6 {
 /************** LAYOUT **************/
 .d-flex { display: flex; }
 
+.flex-between{ justify-content: space-between; }
+
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*repeats 1fr twice*/
+}
+
+.grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*repeats 1fr three times*/
+}
 
 /************** SPACING **************/
 .m-0 { margin: var(--space-0); }
