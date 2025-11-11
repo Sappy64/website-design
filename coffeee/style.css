@@ -45,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
 .text-dark { color: var(--dark); }
 .text-muted { color: var(--muted); }
 
+/************** LAYOUT **************/
+.d-flex { display: flex; }
+
+
 /************** SPACING **************/
 .m-0 { margin: var(--space-0); }
 .m-1 { margin: var(--space-1); }
