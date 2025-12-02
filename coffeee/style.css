@@ -3,9 +3,15 @@
 /* Variables for this website */
 :root {
     --primary: #7b4b2d;
+    --primary-tint: #a16e4e;
+    --primary-shade: #5d3116;
+
     --light: #ffffff;
     --dark: #363029;
+
     --muted: #efe1cb;
+    --muted-tint: #f8f6f5;
+    --muted-shade: #c8c6c5;
 
     --font-normal: Helvetica, Arial, sans-serif;
     --font-heading: "Noto Serif", Arial, sans-serif;
@@ -15,11 +21,14 @@
     --space-2: 1rem; /* 16px */
     --space-3: 2rem; /* 32px */
 
+    --shadow-dark: 0 0.1rem 0.2rem 0.1rem rgba(54, 48, 41, 0.2);
+    --shadow-light: 0 0.1rem 0.2rem 0.1rem rgba(255, 255, 255, 0.5);
 }
 
 /* CSS Reset */
-
 * {
+    box-sizing: border-box;
+    /* will force elements to scale from the border instead */
     margin: 0;
     padding: 0;
 }
@@ -46,19 +55,37 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--primary);
     color: var(--light);
 }
+.btn-primary:hover {
+    background-color: var(--primary-tint);
+}
+.btn-primary:active {
+    background-color: var(--primary-shade);
+}
 
 .btn-secondary {
     background-color: var(--muted);
     color: var(--dark);
+}
+.btn-secondary:hover {
+    background-color: var(--muted-tint);
+}
+.btn-secondary:active {
+    background-color: var(--muted-shade);
 }
 
 .link {
     color: var(--primary);
     text-decoration: underline;
 }
+.link:hover {
+    color: var(--primary-tint);
+}
+.link:active {
+    color: var(--primary-shade);
+}
 
 /************** COLOURS **************/
-.bg-primary { background-color: var(--primary); }
+.bg-primary { background-color: var(--primary); } /* var() looks for a variable */
 .bg-light { background-color: var(--light); }
 .bg-dark { background-color: var(--dark); }
 .bg-muted { background-color: var(--muted); }
@@ -68,7 +95,15 @@ h1, h2, h3, h4, h5, h6 {
 .text-dark { color: var(--dark); }
 .text-muted { color: var(--muted); }
 
+.shadow-dark { box-shadow: var(--shadow-dark); }
+.shadow-light { box-shadow: var(--shadow-light); }
+
 /************** LAYOUT **************/
+.container {
+    max-width: 1280px;
+    margin: var(--space-2) auto var(--space-0);
+}
+
 .d-flex { display: flex; }
 
 .flex-between{ justify-content: space-between; }
@@ -111,3 +146,34 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 100%;
     box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(54, 48, 41, 0.2);
 }
+
+.swatch .swatch-name {
+    text-align: center;
+}
+
+/************** TEXT **************/
+.line-1 {
+    display: -webkit-box; /*Chrome based*/
+    display: -moz-box; /*Firefox*/
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+
+    height: 1.5em;
+    overflow: clip;
+    text-overflow: ellipsis;
+}
+
+.line-2 {
+    display: -webkit-box; /*Chrome based*/
+    display: -moz-box; /*Firefox*/
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+
+    height: 3em;
+    overflow: clip;
+    text-overflow: ellipsis;
+}
+
+/* ADD CONTAINER CLASS */
